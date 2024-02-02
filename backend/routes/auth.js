@@ -99,6 +99,7 @@ router.post('/login', [
           }
           const authtoken=jwt.sign(data,JWT_SECRET);
           success=true;
+          console.log("Login Successfull")
           res.send({success, authtoken});
     } catch(error){
         console.log(error.message);
